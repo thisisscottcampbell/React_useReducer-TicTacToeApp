@@ -48,11 +48,15 @@ const Game = () => {
 			? 'Draw'
 			: 'Winner is ' + winner
 		: 'Next player is ' + (xIsNext ? 'X' : 'O');
-	const moves = (
-		<li>
-			<button>Start The Game</button>
-		</li>
-	);
+
+	const moves = history.map((step, move) => {
+		const desc = move ? 'Go to # ' + move : 'State the Game';
+		return (
+			<li key={moveBy}>
+				<button onClick={() => jumpTo(move)}>{desc}</button>
+			</li>
+		);
+	});
 
 	const squares = Array(9).fill(null);
 
