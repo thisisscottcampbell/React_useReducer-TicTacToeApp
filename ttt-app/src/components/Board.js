@@ -1,22 +1,68 @@
 import React from 'react';
 import Square from './Square';
-const Board = ({ squares }) => {
+const Board = ({ squares, onClick }) => {
+	// console.log(onClick);
 	return (
 		<div className="board">
 			<div>
-				<Square value={squares[0]} onClick={() => console.log(0)} />
-				<Square value={squares[1]} onClick={() => console.log(1)} />
-				<Square value={squares[2]} onClick={() => console.log(2)} />
+				<Square
+					value={squares[0]}
+					onClick={() => {
+						onClick(0);
+					}}
+				/>
+				<Square
+					value={squares[1]}
+					onClick={() => {
+						onClick(1);
+					}}
+				/>
+				<Square
+					value={squares[2]}
+					onClick={() => {
+						onClick(2);
+					}}
+				/>
 			</div>
 			<div>
-				<Square value={squares[3]} onClick={() => console.log(3)} />
-				<Square value={squares[4]} onClick={() => console.log(4)} />
-				<Square value={squares[5]} onClick={() => console.log(5)} />
+				<Square
+					value={squares[3]}
+					onClick={() => {
+						onClick(3);
+					}}
+				/>
+				<Square
+					value={squares[4]}
+					onClick={() => {
+						onClick(4);
+					}}
+				/>
+				<Square
+					value={squares[5]}
+					onClick={() => {
+						onClick(5);
+					}}
+				/>
 			</div>
 			<div>
-				<Square value={squares[6]} onClick={() => console.log(6)} />
-				<Square value={squares[7]} onClick={() => console.log(7)} />
-				<Square value={squares[8]} onClick={() => console.log(8)} />
+				<Square
+					value={squares[6]}
+					onClick={() => {
+						onClick(6);
+					}}
+				/>
+				<Square
+					value={squares[7]}
+					onClick={() => {
+						onClick(7);
+					}}
+				/>
+				<Square
+					value={squares[8]}
+					onClick={() => {
+						onClick(8);
+					}}
+				/>
 			</div>
 		</div>
 	);

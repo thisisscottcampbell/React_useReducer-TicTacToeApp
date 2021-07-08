@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Square = ({ value }) => {
+const Square = ({ value, onClick }) => {
 	return (
-		<button className="btn" onClick={console.log('sq click')}>
+		<button className={value ? 'btn disabled' : 'btn'} onClick={onClick}>
 			{value}
 		</button>
 	);
